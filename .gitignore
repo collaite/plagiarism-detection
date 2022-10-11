@@ -1,0 +1,7 @@
+.git/
+venv/
+data/
+interactive/
+*.csv
+.ipynb_checkpoints/
+.DS_Store
