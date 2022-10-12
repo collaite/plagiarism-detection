@@ -17,3 +17,16 @@ Investigates whether plagiarism detection algorithms can be applied to accuratel
 ### Required input data:
 
 In the CollAIte project, we are applying the algorithm to multiple versions of the "Projectielantaarn Aladin" manuscript by [Raymond Brulez](https://nl.wikipedia.org/wiki/Raymond_Brulez). The required input data is indicated in ``collaite-plagiarism-diagram.pdf``. ``plagiarism-detection.py`` requires two plain text files which represent two witnesses that are directly related chronologically speaking (i.e., one directly follows the other in the version history). The first witness in the sequence is the **training data** and the second witness is the **testing data**. This can be configured on Lines 21-23 in ``plagiarism-detection.py``. If we have four plain text witnesses w1-w4, then we have three pairs of files that we could input to ``plagiarism-detection.py`` i.e., w1-w2; w2-w3; and w3-w4 (see Lines 21-23). ``plagiarism-detection.py`` also requires the name of a CSV output file for storing the results of running the analysis. This can also be configured in Lines 21-23 of ``plagiarism-detection.py``. Finally, ``plagiarism-detection.py`` expects a folder called ``interactive`` in the same directory before running the script. You can of course remove this need or reconfigure the folder name on Line 138.
+
+### Running the script:
+
+**Requirements:**
+1. Python 3.7+
+2. Git
+
+**Steps:**
+1. Clone this repo (``git clone git@github.com:collaite/plagiarism-detection.git``)
+2. Change into the ``plagiarism-detection/`` directory
+3. Run ``pip install -r requirements.txt`` in the terminal or console (optionally create and activate a virtual environment using something like [venv](https://docs.python.org/3/library/venv.html) before running this command)
+4. Ensuring that you have the required input data as indicated above and you have configured ``plagiarism-detection.py`` accordingly, Run ``python plagiarism-detection.py`` or ``python3 plagiarism-detection.py`` depending on your installation settings for Python 3.
+
